@@ -1,0 +1,113 @@
+---
+title: "Day 1 Homework"
+author: "Insert your name here"
+---
+
+**Before starting on this file, make sure you finish exercises in *day1 project > 03-Transform > 03-Transform-Exercises.Rmd.* Answers to those exercises are in the pdf slides (03-Transform-Data.pdf) that are posted on Canvas.**
+
+# Homework starts below
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+You can consult with your lab partner for this homework. Also, feel free to use cheat sheets, Google search etc.
+
+In the chunk below, write the code to load `tidyverse` packages. Hint: you will need to use the `library()` function.
+
+```{r}
+
+```
+
+
+## Question 1
+
+- In the code chunk below, use `read_csv()` to import the dataset `fungicide_dat.csv`. You can run ?read_csv to learn more about this function. Name the imported data `fungicide`.
+
+- Then, use the `glimpse()` function to learn more about the dataset. For example, number of rows, number of columns, column names and their type.
+
+
+```{r}
+
+```
+
+## Question 2
+
+- Using **ggplot2** package, create a scatter plot, with `Treatment` on x-axis and `Yield_bu_per_acre` on y-axis.
+
+```{r}
+
+```
+
+## Question 3
+
+- In the scatter plot created in Question 2, points are overlapping, and it might be hard to visually get an idea how many points are being plotted at each level of `Treatment`. Modify the code you wrote in Question 2, to use `geom_jitter()` instead of `geom_point()`
+
+- Then, color the points based on `Severity`. Try using `color` or `fill` aesthetics.
+
+```{r}
+
+```
+
+## Question 4
+
+- Now, modify the code your wrote in Question 2 to create boxplots. You can either guess the name of the geom that creates boxplot or use the data visualization cheat sheet.
+
+```{r}
+
+```
+
+## Question 5
+
+Add `coord_flip()` function to the code in question 4 to flip the axes.
+
+```{r}
+
+```
+
+## Question 6
+
+Okay, back to boxplots. In the code chunk below, copy the code you wrote in question 5, and then add the code to:
+
+- label y-axis as "Yield (bushels/acre)". You can use the function `ylab`.
+
+- add the title "Effects of fungicide on yield". You can use the function `ggtitle()`.
+
+- add the function `theme_bw()` to simiplify the plot grid.
+
+```{r}
+
+```
+
+## Question 7
+
+- Use **dplyr** verbs (See 03-Transform-Exercises.Rmd in day1 project) to calculate mean and standard deviation of `Yield_bu_per_acre` for each `Treatment`. To calculate mean, use the function `mean()`, and to calculate standard deviation, use the function `sd()`.
+
+- save the resulting dataframe in a new object named `m_fungicide`.
+
+```{r}
+
+```
+
+## Question 7
+
+- Make a bar graph with x-axis as `mean_yield` and y-axis as `Treatment`. You can use `geom_col()` to create the bar graph.
+
+```{r}
+
+```
+
+## Question 8
+
+- Add errorbars to the above graph using `geom_errorbar()`. Use `xmin = mean_yield - sd_yield`, and `xmax = mean_yield + sd_yield` inside the `aes()` function. To get help on `geom_errorbars()`, type `?geom_errorbars`.
+
+```{r}
+
+```
+
+
+
+
+
+
+
